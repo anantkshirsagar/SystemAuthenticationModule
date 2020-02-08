@@ -14,6 +14,8 @@ import org.slf4j.LoggerFactory;
 import com.dbmanager.objectify.Objectify;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.mantra.model.ExportData;
+import com.sam.model.ExportedFingerData;
 
 public class AppUtils {
 
@@ -35,7 +37,7 @@ public class AppUtils {
 		Gson gson = getGsonInstance();
 		return gson.fromJson(jsonObj, jsonType);
 	}
-	
+
 	public static String getBody(HttpServletRequest request) throws IOException {
 		return request.getReader().lines().collect(Collectors.joining());
 	}
@@ -55,5 +57,15 @@ public class AppUtils {
 
 	public static byte[] getObject(List<String> keywordsList) throws SQLException, IOException {
 		return Objectify.serialize(keywordsList);
+	}
+
+	public static ExportedFingerData getExportFingerData(ExportData exportData) {
+		ExportedFingerData exportedFingerData = new ExportedFingerData();
+		exportedFingerData.setAnsiTemplateData(exportData.getAnsiTemplateData());
+		exportedFingerData.setBmpData(exportData.getBmpData());
+		exportedFingerData.setIsoImageData(exportData.getIsoImageData());
+		exportedFingerData.setRawData(exportData.getRawData());
+		exportedFingerData.setWsqData(exportData.getWsqData());
+		return exportedFingerData;
 	}
 }
