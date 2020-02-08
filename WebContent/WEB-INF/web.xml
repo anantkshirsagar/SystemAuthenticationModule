@@ -48,4 +48,13 @@
 		<servlet-name>AadharCardServlet</servlet-name>
 		<url-pattern>/AadharCardServlet</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FingerPrintScannerServlet</servlet-name>
+		<servlet-class>com.sam.servlet.FingerPrintScannerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FingerPrintScannerServlet</servlet-name>
+		<url-pattern>/FingerPrintScannerServlet</url-pattern>
+	</servlet-mapping>
 </web-app>

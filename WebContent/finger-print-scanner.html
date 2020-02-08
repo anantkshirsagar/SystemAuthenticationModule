@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Finger Print Scanner</title>
+		<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+		type="text/javascript"></script>
+		<script src="lib/angjs.js"></script>
+		<script src="lib/w3-lib.js"></script>
+		<script src="js/validation.js"></script>
+		<script src="js/finger-print-scanner.js"></script>
+		<div ng-include="'commons/load-libs.html'"></div>
+	</head>
+	<body ng-app="">
+	<div class="jumbotron">
+		<div class="container">
+			<div class="w3-card-4">
+				<div class="w3-container w3-light-blue">
+					<h2>Finger Print Scanner</h2>
+				</div>
+				
+				<br><br>
+				<div class="w3-container">
+					<div class="w3-panel">
+						<div class="container">
+							<center>
+								<button class="w3-btn w3-black" onclick="scanFinger()">Scan Finger</button>
+								<button class="w3-btn w3-black" onclick="validate()">Validate</button>
+							</center>
+						</div>
+					</div>
+				</div>
+				<br><br>
+				
+									
+			</div>
+		</div>
+	</div>
+</body>
+</html>
